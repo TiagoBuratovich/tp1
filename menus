@@ -1,6 +1,12 @@
+
+#Menu principal
 menu = int(input("Menú principal:\nElija una opción:\n1- Administraciones\n2- Entrega de cupos\n3- Recepción\n4- Registrar calidad\n5- Registrar peso bruto\n6- Registrar descarga\n7- Registrar descarga\n8- Reportes\n0- Salir\n"))
 
 while menu != 0:
+
+
+#Menu del apartado: Administracion
+
 
 	if menu == 1:
 		
@@ -11,9 +17,23 @@ while menu != 0:
 
 			menuterciario1 = int(input("Menú terciario:\nElija una opción:\n1- Alta\n2- Baja\n3- Consulta\n4- Modificación\n0- Volver\n"))
 			while menuterciario1 != 0:
+				if menuterciario1 != 0:
+					menuterciario1 = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
 				menuterciario1 = int(input("Menú terciario:\nElija una opción:\n1- Alta\n2- Baja\n3- Consulta\n4- Modificación\n0- Volver\n"))
 			
 			menusecundario1 = int(input("Menú secundario:\nElija una opción:\n1- Titulares\n2- Productos\n3- Rubros\n4- Rubros por producto\n5- Silos\n6- Sucusales\n7- Producto por titular\n0- Volver al menú principal\n"))
+
+			
+#Menu del apartado: Entrega de cupos
+
+
+	elif menu == 2:
+		entregacupos = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+		while entregacupos != 0:
+			entregacupos = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+
+
+#Menu del apartado: Recepcion
 
 
 	elif menu == 3:
@@ -21,12 +41,53 @@ while menu != 0:
 		menusecundario2 = int(input("Menú secundario:\nElija el tipo de producto:\n1-Soja\n2-Maíz\n0- Volver al menú principal\n"))
 		while menusecundario2 != 0:
 
+			
 
 
 
 
 
 			menusecundario2 = int(input("Menú secundario:\nElija el tipo de producto:\n1-Soja\n2-Maíz\n0- Volver al menú principal\n"))
+
+
+#Menu del apartado: Registrar calidad
+
+
+	elif menu == 4:
+		registrocalidad = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+		while registrocalidad != 0:
+			registrocalidad = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+
+
+#Menu del apartado: Registrar peso bruto
+
+
+	elif menu == 5:
+		registropb = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+		while registropb != 0:
+			registropb = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+
+
+#Menu del apartado: Registrar descarga
+
+
+	elif menu == 6:
+		registrodescarga = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+		while registrodescarga != 0:
+			registrodescarga = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+
+
+#Menu del apartado: Registrar tara
+
+
+	elif menu == 7:
+		registrotara = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+		while registrotara != 0:
+			registrotara = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
+
+
+#Menu del apartado: Reportes
+
 
 	elif menu == 8:
 		menusecundario3 = int(input("Menu secundario: \nElija una opcion: \n1- Cantidad total de camiones que llegaron \n2- Cantidad total de camiones de soja \n3- Cantidad total de camiones de maíz \n4- Peso neto total de soja \n5- Peso neto total de maíz \n6- Promedio del peso neto de soja por camión \n7- Promedio del peso neto de maíz camión \n8- Patente del camión de soja que mayor cantidad de soja descargó \n9- Patente del camión de maíz que menor cantidad de maíz descargó \n0- Volver\n"))
@@ -37,11 +98,6 @@ while menu != 0:
 
 
 			menusecundario3 = int(input("Menu secundario: \nElija una opcion: \n1- Cantidad total de camiones que llegaron \n2- Cantidad total de camiones de soja \n3- Cantidad total de camiones de maíz \n4- Peso neto total de soja \n5- Peso neto total de maíz \n6- Promedio del peso neto de soja por camión \n7- Promedio del peso neto de maíz camión \n8- Patente del camión de soja que mayor cantidad de soja descargó \n9- Patente del camión de maíz que menor cantidad de maíz descargó \n0- Volver \n"))
-
-	elif menu == 2 or 4 or 5 or 5 or 7:
-		menuterciario = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
-		while menuterciario != 0:
-			menuterciario = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
 
 
 
