@@ -1,5 +1,18 @@
+#a
+totalCamiones = 0
+camionesSoja = 0
+camionesMaiz = 0
+pesoSoja = 0
+pesoMaiz = 0
+promedioSoja = 0
+promedioMaiz = 0
+mayorSoja = 0
+mayorMaiz = 0
+
 
 #Menu principal
+
+
 menu = int(input("Menú principal:\nElija una opción:\n1- Administraciones\n2- Entrega de cupos\n3- Recepción\n4- Registrar calidad\n5- Registrar peso bruto\n6- Registrar descarga\n7- Registrar descarga\n8- Reportes\n0- Salir\n"))
 
 while menu != 0:
@@ -11,8 +24,8 @@ while menu != 0:
 	if menu == 1:
 		
 
-		menusecundario1 = int(input("Menú secundario:\nElija una opción:\n1- Titulares\n2- Productos\n3- Rubros\n4- Rubros por producto\n5- Silos\n6- Sucusales\n7- Producto por titular\n0- Volver al menú principal\n"))
-		while menusecundario1 != 0:
+		administ = int(input("Menú secundario:\nElija una opción:\n1- Titulares\n2- Productos\n3- Rubros\n4- Rubros por producto\n5- Silos\n6- Sucusales\n7- Producto por titular\n0- Volver al menú principal\n"))
+		while administ != 0:
 			
 
 			menuterciario1 = int(input("Menú terciario:\nElija una opción:\n1- Alta\n2- Baja\n3- Consulta\n4- Modificación\n0- Volver\n"))
@@ -21,9 +34,9 @@ while menu != 0:
 					menuterciario1 = int(input("¡Esta funcionalidad está en construcción! \n0-Volver\n"))
 				menuterciario1 = int(input("Menú terciario:\nElija una opción:\n1- Alta\n2- Baja\n3- Consulta\n4- Modificación\n0- Volver\n"))
 			
-			menusecundario1 = int(input("Menú secundario:\nElija una opción:\n1- Titulares\n2- Productos\n3- Rubros\n4- Rubros por producto\n5- Silos\n6- Sucusales\n7- Producto por titular\n0- Volver al menú principal\n"))
+			administ = int(input("Menú secundario:\nElija una opción:\n1- Titulares\n2- Productos\n3- Rubros\n4- Rubros por producto\n5- Silos\n6- Sucusales\n7- Producto por titular\n0- Volver al menú principal\n"))
 
-			
+
 #Menu del apartado: Entrega de cupos
 
 
@@ -40,13 +53,36 @@ while menu != 0:
 
 		menusecundario2 = int(input("Menú secundario:\nElija el tipo de producto:\n1-Soja\n2-Maíz\n0- Volver al menú principal\n"))
 		while menusecundario2 != 0:
+			totalCamiones += 1 
+			if menusecundario2 == 1:
+				camionesSoja += 1
+				patente = input("Ingrese la patente del camion:\n ")
+				pesoBruto = int(input("ingrese el peso bruto:\n "))
+				tara = int(input("ingrese la tara:\n "))
+				pesoNeto = pesoBruto - tara 
+				if pesoNeto == mayorSoja:
+					mayorSoja = pesoNeto
+				pesoSoja += pesoNeto
+				promedioSoja = pesoSoja / camionesSoja
+				print ("El peso neto del camion con patente",patente,"es de: " , pesoNeto , "kg")
 
-			
+			elif menusecundario2 == 2 :
+				camionesMaiz += 1
+				patente = str(input("Ingrese la patente del camion:\n "))
+				pesoBruto = int(input("ingrese el peso bruto:\n "))
+				tara = int(input("ingrese la tara:\n "))
+				pesoNeto = pesoBruto - tara  
+				if pesoNeto == mayorMaiz:
+					mayorMaiz = pesoNeto
+				pesoMaiz += pesoNeto 
+				promedioMaiz = pesoMaiz / camionesMaiz
+				print ("El peso neto del camion con patente", patente ,"es de: " , pesoNeto ,"kg" )
 
+			else :
+				print("No se ingreso correctamente")
+				menusecundario2 = int(input("Menú secundario:\nElija el tipo de producto:\n1-Soja\n2-Maíz\n0- Volver al menú principal\n"))
 
-
-
-
+		
 			menusecundario2 = int(input("Menú secundario:\nElija el tipo de producto:\n1-Soja\n2-Maíz\n0- Volver al menú principal\n"))
 
 
